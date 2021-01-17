@@ -1,38 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400&display=swap");
+
+h4 {
+	transition: 0.2s;
+	font-family: "Almarai", sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.get-advice {
+	padding: 1em;
+	width: 50%;
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+}
+
+button {
+	font-family: "Almarai", sans-serif;
+	outline: none;
+	border: none;
+	margin: 0 1em;
+	padding: 0.6em 1em;
+	border-radius: 10px;
+	background: rgba(29, 65, 29, 0.274);
+	box-shadow: 49px 49px 98px #666666, -49px -49px 98px rgba(29, 65, 29, 0.274);
+}
+
+button:hover {
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.678);
+	color: white;
+}
+
 .App {
-  text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	font-family: "Lora", serif;
+	width: 40%;
+	padding: 3em;
+	margin: 0 auto;
+	border-radius: 50px;
+	background: #ffffffe5;
+	box-shadow: inset -5px -5px 10px #666666, inset 5px 5px 10px #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .search-container {
+	margin: 1.5em 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes para {
+	100% {
+		background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%, 400px 0;
+	}
 }

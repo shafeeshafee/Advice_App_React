@@ -6,8 +6,10 @@ import Advice from './Advice'
 
 export default function RandomButton() {
 
+
+
     const [randomAdvice, setRandomAdvice] = useState('')
-    
+
     const fetchData = async () => {
         try {
             const response = await axios.get(RANDOM_ADVICE_URL);
@@ -24,9 +26,8 @@ export default function RandomButton() {
     }, [])
 
     return (
-        <div>
-            <h1>Random Advice</h1>
-            <Advice advice={randomAdvice.advice} /><button onClick={fetchData}>Get Random Advice</button>
+        <div className="get-advice">
+            <Advice advice={randomAdvice.advice} /><button onClick={fetchData}>Get Advice</button>
         </div>
     )
 }

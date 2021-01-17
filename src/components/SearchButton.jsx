@@ -13,13 +13,17 @@ export default function SearchButton() {
     }
 
     const fetchData = async () => {
-        try {
-            const response = await axios.get(`${SEARCH_ADVICE_URL}${searchInput}`);
-            setSearchData(response.data.slips)
-        }
-        catch (err) {
-            console.log('Error', err)
-        }
+        // try {
+        //     const response = await axios.get(`${SEARCH_ADVICE_URL}${searchInput}`);
+        //     setSearchData(response.data.slips)
+        // }
+        // catch (err) {
+        //     console.log('Error', err)
+        // }
+
+        const response = await axios.get(`${SEARCH_ADVICE_URL}${searchInput}`)
+        .then(res => setSearchData(res.data.slips))
+        .catch(error => console.log(error))
     }
 
     useEffect(() => {
@@ -27,10 +31,9 @@ export default function SearchButton() {
     }, [])
 
     return (
-        <div>
-            <h1>Search For Advice</h1>
+        <div className="search-container">
             <input onChange={handleChange} />
-            <button onClick={fetchData}>Search</button>
+            <button onClick={fetchData}>Search Quotes</button>
 
             <ul style={{ marginTop: 25 }}>
                 {searchData ? searchData.map((item, index) => {
